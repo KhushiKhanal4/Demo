@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: #2E236C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Oswald", sans-serif;
+}
+
+
+.container {
+    background-color: #17153B;
+    padding: 2rem;
+    border-radius: 14px;
+    color: #C8ACD6;
+    box-shadow: 0 4px 8px rgba(200, 172, 214, 0.5);
+
+}
+
+h1,
+h2 {
+    background: linear-gradient(to left, #a613e6, #9174f8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+}
+
+#new-task-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 1.5rem 0rem;
+}
+
+input,
+button {
+    padding: 5px;
+    background: linear-gradient(to right, #3C0753, #5c53bd9a);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#task-input {
+    font-size: 1.145rem;
+    width: 100%;
+    color: #cbc7f1;
+    background: linear-gradient(to right, #3C0753, #5c53bd9a);
+}
+
+
+#task-input::placeholder {
+    color: #766ccf;
+}
+
+.addTask {
+    padding: 15px;
+    background: linear-gradient(to right, #3C0753, #b764ee);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.task-list {
+    margin-top: 1rem;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E236C;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.activities {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.taskName { 
+    color: #9174f8;
+    font-size: 1rem;
+    padding: 5px;
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px  #000000;
+   text-overflow: ellipsis;
+   
+}
+
+.editBtn,
+.deleteBtn {
+    font-weight: 700;
+    color: #000000;
+    background: linear-gradient(to right, #3C0753, #b764ee);
+    padding: 15px;
+    border:none;
+    cursor: pointer; 
+}
+
+.addTask:active,
+.editBtn:active,
+.deleteBtn:active {
+    transition: ease-out 0.5s;
+    transform: scale(45%);
+}
+
+.error{   
+    background:linear-gradient(to right,rgba(248, 207, 207, 0.5),rgba(77, 1, 1, 0.582)) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 22px 0px;
+    color: rgb(63, 4, 0);
+    display: none;
+    
+}
+
+@media only screen and (max-width: 700px){
+    .container {
+       min-width: 52vw;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    .editBtn, .deleteBtn {
+        padding: 12px;
+        font-size: 12px;
+    }
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .activities {
+        margin-top: 10px;
+        width: 100%;
+        
+    }
+} 

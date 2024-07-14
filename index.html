@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do-List_task-manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>A demo for deployment</h1>
+    <div class="container">
+        <header>
+            <h1>WELCOME TO YOUR PERSONAL TASK MANAGER !</h1>
+            <form id="new-task-form">
+                <input type="text" id="task-input" placeholder="What are your plans for today?" />
+                <input type="submit" class="addTask" value="Add Task">
+            </form>   
+        </header>
+        <section>
+            <h2>My Tasks</h2>
+            <div class="task-list">
+                <!-- Tasks will be dynamically added here! -->
+            </div>
+            
+        </section>
+       <div  class="error">Please enter a task</div>
+    </div>
+ 
+
+<script src="script.js"></script>
 </body>
+
 </html>
